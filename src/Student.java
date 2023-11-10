@@ -15,7 +15,7 @@ public class Student {
         this.university = university;
     }
 
-    //Metoda wyswietlajaca dane studenta
+    //Metoda publiczna wyswietlajaca dane studenta
     public void display()
     {
         System.out.println("Full Name : " + fullName);

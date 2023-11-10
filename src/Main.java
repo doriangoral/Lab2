@@ -27,9 +27,11 @@ public class Main
             //Wywołanie metody display wyświetlającej dane studenta
             System.out.println("Student 1:");
             student1.display();
-            //Wywolanie metody setFullName (setter) zmieniajacej imie i nazwisko studenta
+            //Wywolanie metody setFullName (setter) zmieniajacej wartosc zmiennej prywatnej
             student1.setFullName("Zmienione Dane!!");
+            //Analogicznie jak wyzej
             student1.setAge(30);
+            //Analogicznie jak wyzej
             student1.setMajor("Zmieniony Kierunek!!");
             //Brak potrzeby tworzenia i wywoływania settera dla zmiennej publicznej
             student1.university = "Zmieniona Uczelnia!!";
