@@ -2,34 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int integer;
-        double floating;
-        char character;
-        boolean bool;
 
+        System.out.println("Do you want to run Tab or DataTypes?");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
-        integer = scanner.nextInt();
-        System.out.print("Enter a floating point number: ");
-        floating = scanner.nextDouble();
-        System.out.print("Enter a character: ");
-        character = scanner.next().charAt(0);
-        System.out.print("Enter a boolean: ");
-        bool = scanner.nextBoolean();
-
-        //convert double to integer
-        int doubleToInteger = (int) floating;
-        //convert integer to double
-        double integerToDouble = integer;
-        //convert character to integer
-        int characterToInt = Character.getNumericValue(character);
-        //convert boolean to string
-        String boolToString = String.valueOf(bool);
-
-        System.out.println("doubleToInteger: " + doubleToInteger);
-        System.out.println("integerToDouble: " + integerToDouble);
-        System.out.println("characterToInt: " + characterToInt);
-        System.out.println("boolToString: " + boolToString);
+        char input = scanner.next().charAt(0);
+        if (input == 'T' || input == 't')
+        {
+            Tab.main(args);
         }
-
+        else if (input == 'D' || input == 'd')
+        {
+            DataTypes.main(args);
+        } else {
+            System.out.println("Invalid input");
+        }
+        scanner.close();
+    }
 }
