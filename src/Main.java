@@ -46,7 +46,9 @@ public class Main
             //Przypisanie wartosci publicznej zmiennej
             student2.university = "WSB-NLU";
 
-            System.out.println("Student 2 name: " + student2Name + "\nUniversity: " + student2.university);
+            //Wyswietlanie danych studenta 2 przypisanych do zmiennych za pomocą getterów
+            System.out.println("Student 2 (gettery): ");
+            System.out.println("Name: " + student2Name + "\nUniversity: " + student2.university + "\nAge: " + student2Age + "\nMajor: " + student2Major);
         }
         //Obslugiwanie blednego inputu
         else

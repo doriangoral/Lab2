@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class DataTypes {
-    public static void main(String[] args) {
+public class DataTypes
+{
+    public static void main(String[] args)
+    {
         //Deklaracja zmiennych
         int integer;
         double floating;

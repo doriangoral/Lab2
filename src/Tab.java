@@ -74,8 +74,10 @@ public class Tab {
         System.out.println("Number of occurrences of " + valueToFind + " in array: " + numberOfOccurrences);
     }
     //Metoda do wyświetlania tablicy za pomocą pętli "for each"
-    public static void printTable(int[] table) {
-        for (int j : table) {
+    public static void printTable(int[] table)
+    {
+        for (int j : table)
+        {
             System.out.print(j + " ");
         }
         System.out.println();
