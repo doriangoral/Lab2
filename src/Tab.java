@@ -1,8 +1,8 @@
 import java.util.Arrays;
-import java.util.Scanner;
 public class Tab {
     public static void main(String[] args)
     {
+        //Deklaracja tablicy intArray i przypisanie jej wartości, i deklaracja tablicy intArray2 i przypisanie jej wartości
         int[] intArray = {11,12,13,14,15};
         int[] intArray2 = {1,2,3,4,5};
 
@@ -37,17 +37,20 @@ public class Tab {
         printTable(filteredIntArray);
 
         //Usuwanie elementu wskazanego przez uzytkownika i tworzenie nowej tablicy bez tego elementu
-        Scanner scanner = new Scanner(System.in);
         int[] intArray4 = {1,2,3,4,5};
         System.out.println("What value do you want to remove from the following array? ");
         printTable(intArray4);
-        int valueToRemove = scanner.nextInt();
+        //wartość do usunięcia
+        int valueToRemove = 3;
         System.out.println("Removing " + valueToRemove + " from the array");
+        //Filtrowanie strumienia i zapisanie wyniku w nowej tablicy
         int[] deletedIntArray = Arrays.stream(intArray4).filter(x -> x != valueToRemove).toArray();
         printTable(deletedIntArray);
 
         //Połączenie dwóch tablic intArray i intArray2 za pomocą metody concat() i zapisanie wyniku w nowej tablicy
+        //utworzenie nowej tablicy o długości sumy długości obu tablic
         int[] combinedIntArray = new int[intArray.length + intArray2.length];
+        //Kopia elementow z tablic intArray i intArray2 do nowej tablicy
         System.arraycopy(intArray, 0, combinedIntArray, 0, intArray.length);
         System.arraycopy(intArray2, 0, combinedIntArray, intArray.length, intArray2.length);
         System.out.println("Combined intArray and intArray2: ");
@@ -55,22 +58,27 @@ public class Tab {
 
         //Krótsze rozwiązanie łączenia dwóch tablic, przy tworzeniu nowej tablicy od razu kopiujemy elementy z pierwszej tablicy i deklarujemy jej długość jako sumę długości obu tablic
         int[] combinedIntArray2 = Arrays.copyOf(intArray, intArray.length + intArray2.length);
+        //Kopia pozostalych elementow z intArray2
         System.arraycopy(intArray2, 0, combinedIntArray2, intArray.length, intArray2.length);
         System.out.println("Combined intArray and intArray2 using shorter method: ");
         printTable(combinedIntArray2);
 
         //Znajdywanie liczby wystąpień elementu w tablicy za pomocą metody filter() i metody count() zwracającej liczbę elementów w przefiltrowanym wcześniej strumieniu
         int[] intArray5 = {1,2,3,4,5,1,2,3,4,5,2};
+        //Wartość do znalezienia
         int valueToFind = 2;
         System.out.println("Finding number of occurrences of " + valueToFind + " in the following array: ");
         printTable(intArray5);
+        //Filtrowanie strumienia i zliczanie elementów
         int numberOfOccurrences = (int) Arrays.stream(intArray5).filter(x -> x == valueToFind).count();
         System.out.println("Number of occurrences of " + valueToFind + " in array: " + numberOfOccurrences);
     }
+    //Metoda do wyświetlania tablicy za pomocą pętli "for each"
     public static void printTable(int[] table) {
         for (int j : table) {
             System.out.print(j + " ");
         }
         System.out.println();
     }
+
 }
