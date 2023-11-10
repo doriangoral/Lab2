@@ -1,5 +1,5 @@
 public class Student {
-    //Deklaracja zmiennych prywatnych (nie mozna ich zmienic z innych klas
+    //Deklaracja zmiennych prywatnych (nie mozna ich zmienic z innych klas)
     private String fullName;
     private int age;
     private String major;
