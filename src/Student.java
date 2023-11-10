@@ -25,7 +25,7 @@ public class Student {
         System.out.println();
     }
 
-    //Metoda (getter) zwracajaca tylko imie i nazwisko
+    //Metoda (getter) zwracajaca wartosc zmiennej prywatnej
     public String getFullName()
     {
         return fullName;
@@ -38,7 +38,7 @@ public class Student {
     {
         return major;
     }
-    //Metoda (setter) ustawiajaca imie i nazwisko
+    //Metoda (setter) ustawiajaca wartość zmiennej prywatnej
     public void setFullName(String fullName)
     {
         this.fullName = fullName;
