@@ -7,6 +7,7 @@ public class Student {
     //Deklaracja zmiennej publicznej (mozna ja zmienic z innych klas)
     public String university;
 
+    //Konstruktor
     public Student(String fullName, int age, String major, String university)
     {
         this.fullName = fullName;
